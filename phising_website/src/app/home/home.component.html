@@ -1,0 +1,21 @@
+<main class="flex flex col h-screen justify-center items-center">
+  @for (item of items; track $index;let i=$index) {
+  <div class="absolute"  [style.left]="i == 0 ? null:item.left" [style.right]="i == 0 ? null:item.right" [style.top]="i == 0 ? null:item.top" [style.bottom]="i == 0 ? null:item.bottom">
+    
+      <app-popup></app-popup> 
+    
+     
+    <div class="absolute w-full flex justify-center text-center bottom-10">
+      <div class="bg-white relative w-max px-2 rounded-full cursor-pointer hover:scale-90" (click)="closePopup()">
+        <div class="absolute -left-3 -bottom-8 h-20 w-20 rounded-full bg-white/[0.3] animate-ping">
+
+        </div>
+        Close
+      </div>
+    </div>
+  </div>
+  }
+  
+  <img src="3918929.jpg" alt="" class="absolute -z-50 w-full h-full object-contain">
+    <div class="text-black/[0.8] text-5xl font-bold">Got U Budy!</div>
+</main>
